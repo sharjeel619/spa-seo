@@ -23,9 +23,10 @@ app.use((req, res, next) => {
 app.get('/tvshow', (req, res) => { // The url path '/tvshows' should match the one in your SPA 
   const {id} = req.query;
   fetch(`${baseApiUrl}/shows/${id}`)
-    .then((response) => {
+    .then(response=> response.json())
+    .then((data) => {
       // Fill the meta title, description and image you would want to show when sharing the link '/tvshows'
-      const {name, summary, image, status} = response.json();
+      const {name, summary, image, status} = data;
       if (status === 404) res.send(metaTags(defaultTitle, defaultDescription, defaultImage));
       else res.send(metaTags(name, summary, image.medium));
     })

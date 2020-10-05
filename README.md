@@ -1,4 +1,4 @@
-# SEO solution for your Single page applications
+# SEO solution for your Single page application
 
 ## Problem
 ```
@@ -11,9 +11,11 @@ You have a SPA and you want to put dynamic information (most likely from an API 
 - If the request came from some social media bot, make an API call to your back-end server, gather the data you need, fill in that data to html meta tags and return those tags in string format back to the client.
 - If the request didn't come from some social media bot, then simply return the index.html file from the build folder of your single page application.
 ```
-### Project setup
+### Installation
+Navigate to `Node.js` folder and Run:
 ```
+yarn install && node index.js
 ```
-
+This will install your node.js project dependencies and start a local node.js server at port 8082
 <!-- ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/). -->

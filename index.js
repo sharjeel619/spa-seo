@@ -4,13 +4,13 @@ const fetch = require('node-fetch');
 const app = express();
 const baseApiUrl = "https://api.tvmaze.com"; // Taken from 'http://www.tvmaze.com/api' (No token/auth required to use this API)
 const port = 8082;
-const appPath = 'dist'; // The name of your build folder that contains your SPA
+const appPath = 'SPA/dist'; // The path and name of your build folder that contains your SPA
 
 const defaultTitle = 'Default title for your SPA';
 const defaultDescription = 'Default description for your SPA';
 const defaultImage = path.join(__dirname, `${appPath}/favicon.ico`); // Your SPA's favicon
 
-const socialMediaAgents = ['slackbot', 'facebook', 'facebot', 'twitter', 'linkedin']; // Mention your social media bots here
+const socialMediaAgents = ['slackbot', 'facebook', 'facebot', 'twitter', 'linkedin', 'discordbot']; // Mention your social media bots here
 
 app.use(express.static(path.join(__dirname, appPath)));
 
@@ -26,10 +26,9 @@ app.get('/tvshow/:showId', (req, res) => { // The url path '/tvshow' should matc
     .then(response=> response.json())
     .then((data) => {
       // Fill the meta title, description and image you would want to show when sharing the link '/tvshows'
-      const {name, summary, image, status} = data;
-      console.log(data);
+      const {name, image, status} = data;
       if (status === 404) res.send(metaTags(defaultTitle, defaultDescription, defaultImage));
-      else res.send(metaTags(name, summary, image.medium));
+      else res.send(metaTags(name, name, image.medium));
     })
     .catch((error) => {
       res.send(metaTags(defaultTitle, defaultDescription, defaultImage));

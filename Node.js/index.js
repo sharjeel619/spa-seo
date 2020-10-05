@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const app = express();
 const baseApiUrl = "https://api.tvmaze.com"; // Taken from 'http://www.tvmaze.com/api' (No token/auth required to use this API)
 const port = 8082;
-const appPath = 'SPA/dist'; // The path and name of your build folder that contains your SPA
+const appPath = 'dist'; // The path to your build folder that contains your SPA
 
 const defaultTitle = 'Default title for your SPA';
 const defaultDescription = 'Default description for your SPA';

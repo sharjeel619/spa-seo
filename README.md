@@ -18,7 +18,7 @@ yarn install && node index.js
 This will install your Node dependencies and start a local Node server at port 8082.
 
 I've already build some files from a simple Vue.js app in the `dist` folder. Or you can simply use your own.
-Link to the sample Vue.js app can be found [here](https://pip.pypa.io/en/stable/)
+Link to the sample Vue.js app can be found [here](https://github.com/sharjeel619/TvMaze)
 
 ### Usage
 - Go to `localhost:8082` in your browser and you will see your SPA load.

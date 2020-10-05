@@ -28,7 +28,7 @@ export default {
   methods: {
     getShowDetails() {
       const { id } = this.$route.params;
-      fetch(`http://api.tvmaze.com/shows/${id}`)
+      fetch(`https://api.tvmaze.com/shows/${id}`)
         .then(response => response.json())
         .then((data) => {
           this.showInfo = data

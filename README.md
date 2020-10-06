@@ -20,6 +20,7 @@ Link to the sample Vue.js app can be found [here](https://github.com/sharjeel619
 - Go to `localhost:9999` in your browser and you will see your SPA load.
 - To see if the SEO actually works, you don't need an actual node.js server you can just fire up a ngrok server that you can download from [here](https://ngrok.com/download)
 - Click on one of the tv shows and copy/paste the ngrok generated url (e.g: 'your_ngrok_url/tvshow/2') in your twitter/linkedin post or slack/discord channel
+- Working link for this project on `Heroku` can be found [here](https://limitless-shelf-89657.herokuapp.com/)
 - And Voila! you should all the relevant details in your post.
  ![Twitter](https://user-images.githubusercontent.com/11159443/95107020-c512fa00-0752-11eb-9f81-f1940f8e10c5.png)
  ![LinkedIn](https://user-images.githubusercontent.com/11159443/95107019-c47a6380-0752-11eb-87b3-0eb96873d700.png)

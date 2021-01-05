@@ -43,7 +43,7 @@ function metaTags(title, description, image) {
 app.use(express.static(path.join(__dirname, appPath)));
 
 app.use((req, res, next) => {
-  const userAgent = req.headers['user-agent'] || ''; // Detects if the request came from a browser or a crawler bot from any social media
+  const userAgent = req.headers['user-agent'] || ''; // Detects if the request came from a browser or a crawler bot.
   if (isbot(userAgent)) next();
   else res.sendFile(path.join(__dirname, `${appPath}/index.html`));
 });
